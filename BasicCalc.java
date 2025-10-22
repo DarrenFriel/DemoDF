@@ -1,24 +1,22 @@
 // Java program for simple calculator
-import java.io.*;
-import java.lang.*;
-import java.lang.Math;
 import java.util.Scanner;
 
 // Driver class
-public class BasicCalculator {
+public class BasicCalc {
     // main function
     public static void main(String[] args)
     {
-        double num1, num2;
+        int num1, num2;
         
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the numbers:");
 
-        num1 = sc.nextDouble();
-        num2 = sc.nextDouble();
-        sum = num1+num2;
-        print(num1, " + ", num2 " = ", num3)
+        num1 = sc.nextInt();
+        num2 = sc.nextInt();
+        double sum = num1 + num2;
+        System.out.println(num1 + " + " + num2 + " = " + sum);
         
+        sc.close();
     }
 }
