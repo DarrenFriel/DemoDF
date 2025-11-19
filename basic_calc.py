@@ -14,9 +14,10 @@ if __name__ == '__main__':
 class BasicCalc:
     def add(self, a, b):
         return a + b
+    def sub(self, a, b):
+        return a - b
 
-
-def main():
+def add():
     num1 = int(input("Enter the first number: "))
     num2 = int(input("Enter the second number: "))
 
@@ -25,6 +26,14 @@ def main():
 
     print(f"{num1} + {num2} = {total}")
 
+def sub():
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+
+    calc = BasicCalc()
+    total = calc.sub(num1, num2)
+
+    print(f"{num1} - {num2} = {total}")
 
 if __name__ == "__main__":
     main()
