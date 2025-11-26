@@ -14,19 +14,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout the code
       - uses: actions/checkout@v4
 
+      # 2️⃣ Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
+      # 3️⃣ Install pdoc
       - name: Install pdoc
         run: pip install pdoc
 
+      # 4️⃣ Generate documentation
       - name: Generate docs
-        run: pdoc --output-dir docs src  # fixed command
+        run: |
+          mkdir -p docs
+          # Generate docs for each Python file in src/
+          for file in src/*.py; do
+            pdoc --output-dir docs "$file"
+          done
 
+      # 5️⃣ Upload docs to GitHub Pages artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -37,8 +47,8 @@ jobs:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # 6️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
