@@ -30,5 +30,13 @@ jobs:
       - name: Super-linter
         uses: super-linter/super-linter@v8.2.1 # x-release-please-version
         env:
-          # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # Disable everything by default
+          VALIDATE_ALL: false
+
+          # Enable only what you need
+          VALIDATE_PYTHON: true
+          VALIDATE_YAML: true
+          VALIDATE_GITHUB_ACTIONS: true
+
