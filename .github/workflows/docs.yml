@@ -1,5 +1,4 @@
 name: Build Python Docs
-
 on:
   push:
     branches: [ "main" ]
