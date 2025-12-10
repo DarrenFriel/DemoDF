@@ -27,9 +27,7 @@ jobs:
       - name: Generate docs
         run: |
           mkdir -p docs
-          for file in src/*.py; do
-            pdoc --output-dir docs "$file"
-          done
+          pdoc --output-dir docs src
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
