@@ -4,10 +4,6 @@ import mylib
 logger = logging.getLogger(__name__)
 
 
-def do_something():
-    """Log an info message indicating an action is performed."""
-    logger.info('Doing something')
-
 def main():
     logging.basicConfig(filename='myapp.log', level=logging.INFO)
     logger.info('Started')

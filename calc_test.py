@@ -1,3 +1,5 @@
+"""Unit tests for the BasicCalc class from basic_calc module."""
+
 import unittest
 from basic_calc import BasicCalc
 
@@ -22,5 +24,3 @@ class TestCalc(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
