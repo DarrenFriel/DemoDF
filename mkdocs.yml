@@ -7,6 +7,10 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
+          rendering:
+            show_signature: true
+          selection:
+            docstring_style: google
 
 nav:
   - Home: index.md
