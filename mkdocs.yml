@@ -4,13 +4,7 @@ theme:
 
 plugins:
   - search
-  - mkdocstrings:
-      handlers:
-        python:
-          rendering:
-            show_signature: true
-          selection:
-            docstring_style: google
+  - mkdocstrings
 
 nav:
   - Home: index.md
