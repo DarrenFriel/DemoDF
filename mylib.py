@@ -5,3 +5,4 @@ def do_something():
     logger.info('Doing something')
 
 #end
+
