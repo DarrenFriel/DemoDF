@@ -1,28 +1,35 @@
-#basic calculator class
+"""Module for a basic calculator that can add and subtract two numbers."""
+
 import logging
 import mylib
+
+# Create a logger for this module
 logger = logging.getLogger(__name__)
 
 
 def main():
+    """Run the main application logic with logging."""
     logging.basicConfig(filename='myapp.log', level=logging.INFO)
     logger.info('Started')
     mylib.do_something()
     logger.info('Finished')
 
-if __name__ == '__main__':
-    main()
 
 class BasicCalc:
-    #this project is a basic calcuulator which is adding and subtracting two numbers
-    def add(self, a, b):#calling my functions
+    """A simple calculator for basic arithmetic operations."""
+
+    def add(self, a, b):
+        """Return the sum of a and b."""
         return a + b
+
     def sub(self, a, b):
+        """Return the difference of a and b."""
         return a - b
 
-#Function for adding
+
 def add():
-    num1 = int(input("Enter the first number: "))#takes two values, both integers
+    """Prompt user for two numbers, add them using BasicCalc, and print the result."""
+    num1 = int(input("Enter the first number: "))
     num2 = int(input("Enter the second number: "))
 
     calc = BasicCalc()
@@ -30,9 +37,10 @@ def add():
 
     print(f"{num1} + {num2} = {total}")
 
-#Function for subtracting numbers
+
 def sub():
-    num1 = int(input("Enter the first number: "))#takes two values, both integers
+    """Prompt user for two numbers, subtract them using BasicCalc, and print the result."""
+    num1 = int(input("Enter the first number: "))
     num2 = int(input("Enter the second number: "))
 
     calc = BasicCalc()
@@ -40,7 +48,6 @@ def sub():
 
     print(f"{num1} - {num2} = {total}")
 
+
 if __name__ == "__main__":
     main()
-
-#end
