@@ -1,4 +1,6 @@
-"""Unit tests for the BasicCalc class from basic_calc module."""
+"""Unit tests for the BasicCalc class from basic_calc module.
+Darren Friel L00181590
+"""
 
 import unittest
 from basic_calc import BasicCalc
