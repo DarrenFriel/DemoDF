@@ -1,4 +1,6 @@
-"""Module for a basic calculator that can add and subtract two numbers."""
+"""Module for a basic calculator that can add and subtract two numbers.
+Darren Friel
+"""
 
 import logging
 
@@ -7,10 +9,14 @@ logger = logging.getLogger(__name__)
 
 def main() -> None:
     """Run the main application logic with logging."""
-    logging.basicConfig(filename="myapp.log", level=logging.INFO)
+    logging.basicConfig(
+        filename="myapp.log",
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    )
     logger.info("Started")
-    # Put your real application logic here
     logger.info("Finished")
+
 
 
 class BasicCalc:
