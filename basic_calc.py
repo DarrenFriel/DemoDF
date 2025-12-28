@@ -1,7 +1,10 @@
 """Module for a basic calculator that can add and subtract two numbers."""
 
 import logging
-import mylib
+def main():
+    import mylib
+    mylib.do_something()
+
 
 # Create a logger for this module
 logger = logging.getLogger(__name__)
